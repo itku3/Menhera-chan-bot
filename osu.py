@@ -2,7 +2,7 @@ from urllib.parse import urlencode
 import requests
 
 
-key = "e6c2110d0c9adc7af18417e3aaa3fe3e40ebb402"
+key = open("osu-token.txt", 'r').read()
 
 
 def getUserid_and_profileimage(text):
