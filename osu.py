@@ -1,8 +1,8 @@
 from urllib.parse import urlencode
 import requests
+import os
 
-
-key = open("osu-token.txt", 'r').read()
+key = open("token/osu-token.txt", 'r').read()
 
 
 def getUserid_and_profileimage(text):
