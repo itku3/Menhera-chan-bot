@@ -1,3 +1,4 @@
-__pycache__
-discord-token.txt
-upbit-token.txt
+__pycache__/
+token/discord-token.txt
+token/upbit-token.txt
+.vscode
