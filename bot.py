@@ -2,6 +2,7 @@ from discord.ext import commands
 import discord
 import upbit
 import today_anime
+import papago
 import os
 import requests
 import osu
@@ -78,5 +79,20 @@ async def _help(ctx):
     embed.add_field(
         name=">아바타 [유저네임]", value="osu.ppy.sh에서 해당하는 유저의 아바타 프로필을 불러와요!", inline=False)
     await ctx.send(embed=embed)
+
+
+@ bot.command(name="cl")
+async def _check_lang(ctx, *, text):
+    await ctx.send("입력하신 언어는 "+papago.check_lang(text)+" 에요!")
+
+
+@ bot.command(name="ko")
+async def _ja_to_ko(ctx, *, text):
+    await ctx.send(papago.ja_to_ko(text))
+
+
+@ bot.command(name="ja")
+async def _ko_to_ja(ctx, *, text):
+    await ctx.send(papago.ko_to_ja(text))
 
 bot.run(token)
